@@ -17,6 +17,7 @@ myButton2.addEventListener("click", function () {
 
   let numeroRandomPc = 0;
   let numeroUtente;
+  let numeroVerifica;
   let sceltaUtente;
 
   let minimo = 1;
@@ -28,12 +29,23 @@ myButton2.addEventListener("click", function () {
   } else {
     // riduco sempre il testo al minuscolo
     sceltaUtente = prompt("digita pari (p) o dispari (d)").toLowerCase();
+
     if (sceltaUtente != "p" && sceltaUtente != "d") {
       alert("la scelta pari e dispari accetta solo valori p e d");
     } else {
+      // superate le verifiche lavoro sulle richieste
       numeroRandomPc = numeroRandom(minimo, massimo);
 
-      console.log("dopo " + numeroRandomPc);
+      // sommo i valori dati
+      numeroVerifica = numeroRandomPc + numeroUtente;
+      //  lancio la verifica del pari o dispari sul valore dei giocatori
+      risultatoPariDispari = pariDispari(numeroVerifica);
+      // determino il vincitore confrontanto ciò che ha reso la funzione Paridispari con la scelta dell'utente
+      if (risultatoPariDispari == sceltaUtente) {
+        console.log("HA VINTO L'UTENTE");
+      } else {
+        console.log("HA VINTO il computer");
+      }
     }
   }
 });
