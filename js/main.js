@@ -1,13 +1,30 @@
 console.log("main ok");
 
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++
 // esercizio 1
 let myButton1 = document.getElementById("esercizio-1");
 
 myButton1.addEventListener("click", function () {
   console.log("esercizio 1");
+
+  let palindormo = false;
+
+  let userWord = prompt("inserisci la parola da verificare");
+  palindormo = verificaPalindromo(userWord);
+  if ((palindormo = true)) {
+    alert("la parola è PALINDROMA");
+  } else {
+    alert("la parola NON è PALINDROMA manco per nulla");
+  }
 });
 
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++
 // esercizio 2
 let myButton2 = document.getElementById("esercizio-2");
