@@ -45,7 +45,8 @@ myButton2.addEventListener("click", function () {
     alert("SCRIVI SOLO NUMERI DA 1 A 5");
   } else {
     // riduco sempre il testo al minuscolo
-    sceltaUtente = prompt("digita pari (p) o dispari (d)").toLowerCase();
+    // in un prompt la cosa dopo la virgola c'è il valore che viene suggerito
+    sceltaUtente = prompt("digita pari (p) o dispari (d)", "p").toLowerCase();
 
     if (sceltaUtente != "p" && sceltaUtente != "d") {
       alert("la scelta pari e dispari accetta solo valori p e d");
@@ -65,4 +66,27 @@ myButton2.addEventListener("click", function () {
       }
     }
   }
+});
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++
+// esercizio 3 - Crea un array vuoto e chiedi all'utente un numero di dati casuali da inserire nell'array.
+let myButton3 = document.getElementById("esercizio-snack-1");
+
+// Crea un array vuoto e chiedi all'utente un numero di dati casuali da inserire nell'array.
+myButton3.addEventListener("click", function () {
+  console.log("esercizio 3");
+
+  let array = [];
+  let quanti = parseInt(prompt("quanti numeri inserire?"));
+  let min = parseInt(prompt("da che numero", 1));
+  let max = parseInt(prompt("a che numero", 100));
+
+  while (quanti > 0) {
+    array.push(Math.floor(Math.random() * (max - min + 1) + min));
+    quanti = quanti - 1;
+  }
+  console.table(array);
 });

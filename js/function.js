@@ -2,7 +2,8 @@ console.log("function ok");
 
 function verificaPalindromo(wordInput) {
   // trascrivo in minuscolo
-  wordInput = wordInput.toLowerCase();
+  // toglie gli spazi prima e dopo
+  wordInput = wordInput.toLowerCase().trim();
   let wordReverse = "";
   let result = false;
 
