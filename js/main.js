@@ -15,7 +15,7 @@ myButton1.addEventListener("click", function () {
 
   let userWord = prompt("inserisci la parola da verificare");
   palindormo = verificaPalindromo(userWord);
-  if ((palindormo = true)) {
+  if (palindormo == true) {
     alert("la parola è PALINDROMA");
   } else {
     alert("la parola NON è PALINDROMA manco per nulla");
